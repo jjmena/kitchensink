@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Fichero con el menu de la aplicación.
+-->
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:my="http://java.sun.com/jsf/composite/components">
+	
+	<h:form id="menuForm">
+		<rich:toolbar height="26px" id="menuToolbar">
+			<rich:dropDownMenu mode="ajax">
+				<f:facet name="label">
+					<h:panelGroup>
+						<h:outputText value="Recetas" />
+					</h:panelGroup>
+				</f:facet>
+				<rich:menuItem label="Envio" action="/send/send.jsf?faces-redirect=true" >
+				</rich:menuItem>
+			</rich:dropDownMenu>
+		</rich:toolbar>
+	</h:form>
+</ui:composition>
